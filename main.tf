@@ -28,7 +28,7 @@ resource "azurerm_shared_image_gallery" "sig" {
 
 #Creates image definition
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/shared_image
-resource "azurerm_shared_image" "example" {
+resource "azurerm_shared_image" "windows" {
   name                = "avd-image"
   gallery_name        = azurerm_shared_image_gallery.sig.name
   resource_group_name = azurerm_resource_group.sigrg.name
@@ -39,5 +39,19 @@ resource "azurerm_shared_image" "example" {
     publisher = "MicrosoftWindowsDesktop"
     offer     = "office-365"
     sku       = "20h2-evd-o365pp"
+  }
+}
+
+resource "azurerm_shared_image" "linux" {
+  name                = "avd-image"
+  gallery_name        = azurerm_shared_image_gallery.sig.name
+  resource_group_name = azurerm_resource_group.sigrg.name
+  location            = azurerm_resource_group.sigrg.location
+  os_type             = "Linux"
+
+  identifier {
+    publisher = "Canonical"
+    offer     = "0001-com-ubuntu-server-focal"
+    sku       = "20_04-lts-gen2"
   }
 }

@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "ydubinin"
+
+    workspaces {
+      name = "test"
+    }
+  }
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
