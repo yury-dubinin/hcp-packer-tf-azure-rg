@@ -1,6 +1,7 @@
 variable "az_region" {
   description = "The Azure region where the Resource Group exists."
   type        = string
+  default = "northeurope"
 }
 
 variable "az_resource_group" {
