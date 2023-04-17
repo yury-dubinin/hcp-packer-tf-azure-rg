@@ -1,3 +1,6 @@
+# Local .terraform directories
+**/.terraform/*
+
 # Cache objects
 packer_cache/
 
