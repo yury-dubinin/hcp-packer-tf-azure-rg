@@ -6,6 +6,6 @@ variable "deploy_location" {
 
 variable "rg_shared_name" {
   type        = string
-  default     = "rg-shared-resources"
+  default     = "rg-shared-images"
   description = "Name of the Resource group in which to deploy shared resources"
 }
