@@ -6,7 +6,8 @@ resource "azurerm_resource_group" "sigrg" {
 # Creates Shared Image Gallery
 # https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/shared_image_gallery
 resource "azurerm_shared_image_gallery" "sig" {
-  name                = "az-sig"
+  # name can only contain alphanumeric, full stops and underscores.
+  name                = "az_sig_01"
   resource_group_name = azurerm_resource_group.sigrg.name
   location            = azurerm_resource_group.sigrg.location
   description         = "Shared images"

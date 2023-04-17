@@ -16,7 +16,7 @@ locals {
   prefix = "prefix"
   az_region = "northeurope"
   az_resource_group = "rg-shared-images"
-  az_image_gallery = "az-sig"
+  az_image_gallery = "az_sig_01"
   az_subscription_id = "22359f5e-af77-4c86-a1ae-f82408ae3bf0"
   az_image_name = "ubuntu20-image"
 }
