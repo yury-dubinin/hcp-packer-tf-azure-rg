@@ -43,7 +43,7 @@ resource "azurerm_shared_image" "windows" {
 }
 
 resource "azurerm_shared_image" "linux" {
-  name                = "avd-image"
+  name                = "lin-image"
   gallery_name        = azurerm_shared_image_gallery.sig.name
   resource_group_name = azurerm_resource_group.sigrg.name
   location            = azurerm_resource_group.sigrg.location
