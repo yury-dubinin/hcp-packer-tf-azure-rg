@@ -5,7 +5,7 @@ Terraform for an Image Gallery in Azure for HCP Packer
 - https://github.com/danbarr/hcp-packer-azure/tree/main/hcp-packer-ubuntu20
 - https://www.youtube.com/watch?v=2jxmDkOsAzc
 - https://www.youtube.com/watch?v=r0I4TTO957w
-- 
+- https://www.youtube.com/watch?v=9s7PtPiHTSI
 
 ## Packer Commit and Build process
 - run: `packer validate ubuntu-focal.pkr.hcl`
