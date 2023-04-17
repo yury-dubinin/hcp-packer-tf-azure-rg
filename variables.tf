@@ -1,6 +1,6 @@
 variable "deploy_location" {
   type        = string
-  default     = "northeu"
+  default     = "northeurope"
   description = "The Azure Region in which all resources in this example should be created."
 }
 
