@@ -16,9 +16,9 @@ locals {
   prefix = "prefix"
   az_region = "northeurope"
   az_resource_group = "rg-shared-images"
-  az_image_gallery = "sigabph"
+  az_image_gallery = "az-sig"
   az_subscription_id = "22359f5e-af77-4c86-a1ae-f82408ae3bf0"
-
+  az_image_name = "ubuntu20-image"
 }
 
 source "azure-arm" "base" {
@@ -39,7 +39,7 @@ source "azure-arm" "base" {
     subscription         = local.az_subscription_id
     resource_group       = local.az_resource_group
     gallery_name         = local.az_image_gallery
-    image_name           = "ubuntu20-base"
+    image_name           = local.az_image_name
     image_version        = formatdate("YYYY.MMDD.hhmm", timestamp())
     replication_regions  = [local.az_region]
     storage_account_type = "Standard_LRS"
