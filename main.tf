@@ -40,7 +40,7 @@ resource "azurerm_shared_image" "linux" {
   resource_group_name = azurerm_resource_group.sigrg.name
   location            = azurerm_resource_group.sigrg.location
   os_type             = "Linux"
-  hyper_v_generation = "V2"
+  hyper_v_generation  = "V2"
 
   identifier {
     publisher = "Canonical"
