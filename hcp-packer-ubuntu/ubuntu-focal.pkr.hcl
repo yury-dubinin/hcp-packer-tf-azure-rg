@@ -13,7 +13,6 @@ locals {
   image_name = "${local.prefix}-ubuntu20-${local.timestamp}"
   department = "Test"
   owner = "image.owner"
-  prefix = "prefix"
   az_region = "northeurope"
   az_resource_group = "rg-shared-images"
   az_image_gallery = "az_sig_01"
@@ -57,7 +56,7 @@ build {
   # HCP Packer metadata
   hcp_packer_registry {
     bucket_name = "ubuntu20-base"
-    description = "Ubuntu 20.04 (focal) base image."
+    description = "Ubuntu 20.04 (focal) base image"
     bucket_labels = {
       "owner"          = local.owner
       "department"     = local.department
