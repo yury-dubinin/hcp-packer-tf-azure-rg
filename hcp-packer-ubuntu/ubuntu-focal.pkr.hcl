@@ -12,6 +12,7 @@ locals {
   timestamp  = regex_replace(timestamp(), "[- TZ:]", "")
   image_name = "${local.prefix}-ubuntu20-${local.timestamp}"
   department = "Test"
+  prefix = "nn"
   owner = "image.owner"
   az_region = "northeurope"
   az_resource_group = "rg-shared-images"
